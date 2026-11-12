@@ -330,6 +330,12 @@
         invitation: "Have a project, an opportunity, or an idea worth exploring? Get in touch and let’s talk.",
         email: "binethwethmin@gmail.com"
       },
+      socialProfiles: {
+        whatsapp: "",
+        facebook: "https://www.facebook.com/share/1E6qrnqXcV/",
+        linkedin: "https://www.linkedin.com/in/bineth-wethmin?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        threads: "https://www.threads.com/@bineth_wethmin"
+      },
       footer: {
         copyright: "All rights reserved.",
         backToTop: "Back to top ↑"
@@ -1264,6 +1270,42 @@
       text-underline-offset: 4px;
     }
 
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      opacity: 0.85;
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+
+    .social-links a:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .social-links a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+
+    .social-links svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
     @media (max-width: 760px) {
       .wrap {
         width: min(100% - 36px, var(--content));
@@ -1602,6 +1644,38 @@
   <footer>
     <div class="footer-inner wrap">
       <p>© <span id="year">2026</span> <span id="footer-name">Bineth Wethmin</span>. <span id="footer-copyright">All rights reserved.</span></p>
+      <nav aria-label="Social profiles">
+        <ul class="social-links" id="social-links">
+          <li>
+            <a data-social-profile="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.1A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.4.7.7-2.3-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7.1 7.1 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.4l.4-.5.2-.4c.1-.1 0-.3 0-.4s-.5-1.3-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3a9.1 9.1 0 0 0 3.5 3.1c.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.4-.6 1.6-1.1s.2-1 .2-1.1-.1-.2-.3-.3Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-social-profile="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-social-profile="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5V9Zm5.6 0h3.3v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.4v6.4h-3.4v-5.7c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.8H9.1V9Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-social-profile="threads" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.2c-5.2 0-8.5 3.6-8.5 9.4 0 6 3.2 10.2 8.6 10.2 4.2 0 7.1-2.4 7.1-6.1 0-2.8-1.6-4.5-4.2-5.1-.3-2.1-1.4-3.2-3.3-3.2-1.8 0-3.1 1-3.6 2.7l2 .7c.3-1 1-1.5 1.8-1.5.8 0 1.3.4 1.5 1.1a9 9 0 0 0-1.4-.1c-3.2 0-5.2 1.7-5.2 4.3 0 2.2 1.6 3.8 4 3.8 2.3 0 4-1.5 4.5-4 .8.5 1.2 1.3 1.2 2.4 0 2.4-1.9 3.9-5 3.9-4.1 0-6.4-3.3-6.4-9.1 0-4.7 2.4-7.5 6.5-7.5 3.7 0 5.7 2.1 6.1 6.2l2.1-.2C21.2 5 17.9 2.2 12 2.2Zm-.8 14.1c-1.3 0-2-.7-2-1.7 0-1.4 1.1-2.2 3.2-2.2.6 0 1.1.1 1.5.2-.1 2.3-1.1 3.7-2.7 3.7Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <p><a id="footer-back-to-top" href="#home">Back to top ↑</a></p>
     </div>
   </footer>
@@ -1779,6 +1853,14 @@
       const emailLink = document.getElementById("contact-email");
       emailLink.textContent = settings.contact.email;
       emailLink.href = `mailto:${settings.contact.email}`;
+      document.querySelectorAll("[data-social-profile]").forEach((link) => {
+        const href = settings.socialProfiles[link.dataset.socialProfile];
+        if (href) {
+          link.href = href;
+        } else {
+          link.parentElement.remove();
+        }
+      });
       setText("footer-name", settings.name);
       setText("footer-copyright", settings.footer.copyright);
       setText("footer-back-to-top", settings.footer.backToTop);
